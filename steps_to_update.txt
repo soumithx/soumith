@@ -1,0 +1,6 @@
+git add README 
+git add hell.py 
+git commit -m "test"
+git remote add origin https://github.com/soumithx/soumith.git
+git push origin master
+
