@@ -1,0 +1,20 @@
+sh -i cdh5.pem ec2-user@ec2-34-215-215-227.us-west-2.compute.amazonaws.com
+cd cloudera
+setup-default/
+cloudera-director  status aws.simple.conf
+
+* Instance 1: 10.0.1.127 owner=ec2-user
+* Shell 1: ssh -i /home/ec2-user/cloudera-aws-quickstart-04-23-2018.pem ec2-user@10.0.1.127
+
+* Instance 2: 10.0.14.156 owner=ec2-user
+* Shell 2: ssh -i /home/ec2-user/cloudera-aws-quickstart-04-23-2018.pem ec2-user@10.0.14.156
+
+* Instance 3: 10.0.21.147 owner=ec2-user
+* Shell 3: ssh -i /home/ec2-user/cloudera-aws-quickstart-04-23-2018.pem ec2-user@10.0.21.147
+
+* Instance 4: 10.0.5.214 owner=ec2-user
+* Shell 4: ssh -i /home/ec2-user/cloudera-aws-quickstart-04-23-2018.pem ec2-user@10.0.5.214
+
+* Instance 5: 10.0.8.87 owner=ec2-user
+* Shell 5: ssh -i /home/ec2-user/cloudera-aws-quickstart-04-23-2018.pem ec2-user@10.0.8.87
+

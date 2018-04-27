@@ -1,0 +1,2 @@
+ssh -i Downloads/cdh5.pem -L 7180:10.0.16.235:7180 -L 7187:10.0.16.235:7187 ec2-user@ec2-34-215-215-227.us-west-2.compute.amazonaws.com
+
