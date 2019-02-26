@@ -1,2 +1,51 @@
-ssh -i Downloads/cdh5.pem -L 7180:10.0.16.235:7180 -L 7187:10.0.16.235:7187 ec2-user@ec2-34-215-215-227.us-west-2.compute.amazonaws.com
-
+{
+  "Version": "2008-10-17",
+  "Id": "__default_policy_ID",
+  "Statement": [
+    {
+      "Sid": "__default_statement_ID",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": [
+        "SNS:Publish",
+        "SNS:RemovePermission",
+        "SNS:SetTopicAttributes",
+        "SNS:DeleteTopic",
+        "SNS:ListSubscriptionsByTopic",
+        "SNS:GetTopicAttributes",
+        "SNS:Receive",
+        "SNS:AddPermission",
+        "SNS:Subscribe"
+      ],
+      "Resource": "arn:aws:sns:us-west-2:664146986894:Loanmaster",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceOwner": "664146986894"
+        }
+      }
+    },
+    {
+      "Sid": "__console_pub_0",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "arn:aws:sns:us-west-2:664146986894:Loanmaster"
+    },
+    {
+      "Sid": "__console_sub_0",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": [
+        "SNS:Subscribe",
+        "SNS:Receive"
+      ],
+      "Resource": "arn:aws:sns:us-west-2:664146986894:Loanmaster"
+    }
+  ]
+}
