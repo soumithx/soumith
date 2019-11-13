@@ -21,3 +21,15 @@ with open('filpath/file.csv', mode='r') as csv_file:
 
     employee_writer.writerow(['John Smith', 'Accounting', 'November'])
     employee_writer.writerow(['Erica Meyers', 'IT', 'March'])
+
+              
+###############################
+              
+              
+for row in reader:
+        content = list(row[i] for i in included_cols)
+        col3Reformat = content[2].split(":")      #  a:b:c this will read col 3 value and split ,convert into list for each element  [a,b,c]
+         for i in col3Reformat:
+              print(i)                    # print a b c in each line
+              
+        
