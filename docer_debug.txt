@@ -1,0 +1,4 @@
+Docker File Shared Path to debug
+
+
+/Applications/Rider.app/Contents/lib/ReSharperHost. 
